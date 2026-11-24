@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+a {
+    color: #fff;
+    font-family: Courier;
+}
+
+#gameContainer {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 400px;
+    width: 400px;
+}
+
+#gameCanvas {
+    background-color: #0a467d;
+    border:#fff 1px solid;
+    position: relative;
+}
+
+#textbox {
+    color: #fff;
+    padding: 20px;
+    justify-items: center;
+    font-family: 'Courier';
+}

@@ -1,0 +1,101 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: Garamond, 'Baskerville', 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #819080;
+            
+        }
+
+        header, footer {
+            background-color: #f6f5f5;
+            padding: 50px;
+            text-align: center;
+            color: #000;
+        }
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Arial', sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-family: 'Trebuchet MS', 'Arial', sans-serif;
+            margin-top:20px;
+            margin-bottom: 20px;
+        }
+        main{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 30px auto;
+            padding: 30px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        /* Medium screens, 2 cards per row */
+        @media (min-width: 768px) {
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Large screens and up, 3 cards per row */
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border: 3px solid #ced0d4;
+            border-radius: 6px;
+            background-color: #455d3b;
+        }
+
+        /* Ensures all card images match in height and crop cleanly regardless of original size */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+
+        /* Shift card on hover */
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(245, 242, 242, 0.7);
+        }
+
+        /* Makes the anchor tag stretch to fill the full card area */
+        .card-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 1rem;
+            color: inherit; /* Preserves default text color */
+            text-decoration: none; /* Removes underline from text inside card */
+        }
